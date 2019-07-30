@@ -19,7 +19,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = { data: [], open: false, name: "", weapon: "" };
-    fetch("http://localhost:3001/showall")
+    fetch("/showall")
       .then(data => data.json())
       .then(data => {
         console.log(data);
@@ -46,7 +46,7 @@ class App extends Component {
   onClickHandler() {
     console.log(this.refs["simpleForm"].getFormValues());
     let obj = this.refs["simpleForm"].getFormValues();
-    fetch("http://localhost:3001/insert", {
+    fetch("/insert", {
       method: "post",
       headers: {
         Accept: "application/json",
@@ -67,7 +67,7 @@ class App extends Component {
           console.log("obj = " + obj);
           if (this.deleteRow === true) {
             console.log("condition true going to delete the row ");
-            fetch("http://localhost:3001/delete", {
+            fetch("/delete", {
               method: "post",
               headers: {
                 Accept: "application/json",
@@ -95,7 +95,7 @@ class App extends Component {
     this.currentRow.avenger = this.state.name;
     this.currentRow.weapon = this.state.weapon;
     let obj = JSON.stringify(this.currentRow);
-    fetch("http://localhost:3001/update", {
+    fetch("/update", {
       method: "post",
       headers: {
         Accept: "application/json",

@@ -2,6 +2,7 @@
   "name": "myreactapp",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "@material-ui/core": "^3.2.0",
     "@types/inline-style-prefixer": "^5.0.0",
@@ -13,7 +14,7 @@
     "react-dialog": "^1.0.2",
     "react-dom": "^16.5.2",
     "react-modal-dialog": "^4.0.7",
-    "react-scripts": "2.0.3",
+    "react-scripts": "^3.0.1",
     "react-spinjs": "^3.0.0",
     "react-table": "^6.8.6",
     "simple-react-forms": "^2.0.0"
